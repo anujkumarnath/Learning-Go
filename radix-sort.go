@@ -37,8 +37,7 @@ func countingSort(arr []int, placeValue int) []int {
 
 	for i := len(arr) - 1; i >= 0; i-- {
 		/* 7[1]2 -> ([712/(10*10)]%10) -> 1 */
-		digit := arr[i]/placeValue % 10
-		count[digit]++
+		count[arr[i]/placeValue % 10]++
 	}
 
 	for i := 1; i < len(count); i++ {
